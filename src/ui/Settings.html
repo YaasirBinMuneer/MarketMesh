@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Mesh – Settings</title>
+    <link rel="stylesheet" href="Settings.css" />
+</head>
+
+<body>
+    <main class="slide" aria-label="Market Mesh Settings Page">
+
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="brand">
+                <div class="logo" aria-hidden="true"></div>
+                <div class="brand-text">
+                    <h1>Market Mesh</h1>
+                    <p>Retailer Dashboard</p>
+                </div>
+            </div>
+
+            <nav class="nav" aria-label="Primary navigation">
+                <a class="nav-item" href="RetailDashboard.html">Dashboard</a>
+                <a class="nav-item" href="Inventory.html">Inventory</a>
+                <a class="nav-item" href="Exchange.html">Exchange</a>
+                <a class="nav-item" href="Analytics.html">Analytics</a>
+                <a class="nav-item" href="Settings.html">Settings</a>
+            </nav>
+
+            <div class="top-actions">
+                <span class="pill">
+                    <span class="dot" aria-hidden="true"></span>
+                    System Online
+                </span>
+
+                <button class="account" type="button">
+                    <span class="avatar" aria-hidden="true"></span>
+                    <span class="acct-text">
+                        <span class="acct-name">Retailer A</span>
+                        <span class="acct-sub">Store Admin</span>
+                    </span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <section class="content">
+
+            <!-- Left column -->
+            <section class="left">
+
+                <!-- Hero -->
+                <section class="panel hero">
+                    <div class="hero-left">
+                        <h2>Settings</h2>
+                        <p>Manage store info, users, notifications, and security preferences.</p>
+                    </div>
+
+                    <div class="hero-actions">
+                        <button class="btn ghost" type="button">Discard</button>
+                        <button class="btn primary" type="button">Save changes</button>
+                    </div>
+                </section>
+
+                <!-- Store profile -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Store profile</h3>
+                            <p>Basic information shown on the platform.</p>
+                        </div>
+                        <div class="panel-actions">
+                            <span class="pill subtle">Required</span>
+                        </div>
+                    </div>
+
+                    <div class="form grid-2">
+                        <div class="field">
+                            <label for="storeName">Store name</label>
+                            <input id="storeName" class="input" type="text" value="Retailer A – Downtown" />
+                        </div>
+
+                        <div class="field">
+                            <label for="storeId">Store ID</label>
+                            <input id="storeId" class="input" type="text" value="MM-RT-001" />
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Contact email</label>
+                            <input id="email" class="input" type="email" value="store@retailera.com" />
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">Phone</label>
+                            <input id="phone" class="input" type="tel" value="+971 50 000 0000" />
+                        </div>
+
+                        <div class="field span-2">
+                            <label for="address">Address</label>
+                            <input id="address" class="input" type="text" value="Dubai, UAE" />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Notifications -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Notifications</h3>
+                            <p>Choose what you want to be alerted about.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggles">
+                        <div class="toggle">
+                            <div class="toggle-text">
+                                <div class="toggle-title">Low stock alerts</div>
+                                <div class="toggle-sub">Notify when stock falls below your threshold.</div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked />
+                                <span class="slider" aria-hidden="true"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle">
+                            <div class="toggle-text">
+                                <div class="toggle-title">Out of stock alerts</div>
+                                <div class="toggle-sub">Notify immediately when items hit zero.</div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked />
+                                <span class="slider" aria-hidden="true"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle">
+                            <div class="toggle-text">
+                                <div class="toggle-title">Exchange updates</div>
+                                <div class="toggle-sub">Replies, confirmations, and completed exchange notices.</div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked />
+                                <span class="slider" aria-hidden="true"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle">
+                            <div class="toggle-text">
+                                <div class="toggle-title">Weekly summary</div>
+                                <div class="toggle-sub">A weekly email with KPIs and key actions.</div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" />
+                                <span class="slider" aria-hidden="true"></span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- Right column -->
+            <aside class="right">
+
+                <!-- Users & roles -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Users & roles</h3>
+                            <p>Manage who can access the retailer portal.</p>
+                        </div>
+                        <div class="panel-actions">
+                            <button class="btn primary small" type="button">Invite user</button>
+                        </div>
+                    </div>
+
+                    <div class="table">
+                        <div class="thead">
+                            <div>User</div>
+                            <div>Role</div>
+                            <div>Status</div>
+                            <div class="t-right">Action</div>
+                        </div>
+
+                        <div class="trow">
+                            <div class="usercell">
+                                <span class="avatar-sm" aria-hidden="true"></span>
+                                <div class="usertext">
+                                    <div class="uname">Retailer A</div>
+                                    <div class="usub">admin@retailera.com</div>
+                                </div>
+                            </div>
+                            <div><span class="chip neutral">Admin</span></div>
+                            <div><span class="status ok">Active</span></div>
+                            <div class="t-right"><button class="rowbtn" type="button">Edit</button></div>
+                        </div>
+
+                        <div class="trow">
+                            <div class="usercell">
+                                <span class="avatar-sm" aria-hidden="true"></span>
+                                <div class="usertext">
+                                    <div class="uname">Store Manager</div>
+                                    <div class="usub">manager@retailera.com</div>
+                                </div>
+                            </div>
+                            <div><span class="chip neutral">Manager</span></div>
+                            <div><span class="status ok">Active</span></div>
+                            <div class="t-right"><button class="rowbtn" type="button">Edit</button></div>
+                        </div>
+
+                        <div class="trow">
+                            <div class="usercell">
+                                <span class="avatar-sm" aria-hidden="true"></span>
+                                <div class="usertext">
+                                    <div class="uname">Staff Member</div>
+                                    <div class="usub">staff@retailera.com</div>
+                                </div>
+                            </div>
+                            <div><span class="chip neutral">Staff</span></div>
+                            <div><span class="status warn">Pending</span></div>
+                            <div class="t-right"><button class="rowbtn" type="button">Resend</button></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Security -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Security</h3>
+                            <p>Sign-in protection and access control.</p>
+                        </div>
+                        <div class="panel-actions">
+                            <span class="pill subtle">Recommended</span>
+                        </div>
+                    </div>
+
+                    <div class="security">
+                        <div class="sec-row">
+                            <div class="sec-text">
+                                <div class="sec-title">Two-factor authentication (2FA)</div>
+                                <div class="sec-sub">Require a second step when signing in.</div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked />
+                                <span class="slider" aria-hidden="true"></span>
+                            </label>
+                        </div>
+
+                        <div class="sec-row">
+                            <div class="sec-text">
+                                <div class="sec-title">Session timeout</div>
+                                <div class="sec-sub">Automatically sign out after inactivity.</div>
+                            </div>
+                            <select class="input small">
+                                <option>15 minutes</option>
+                                <option selected>30 minutes</option>
+                                <option>60 minutes</option>
+                                <option>Never</option>
+                            </select>
+                        </div>
+
+                        <div class="sec-row">
+                            <div class="sec-text">
+                                <div class="sec-title">Password policy</div>
+                                <div class="sec-sub">Control minimum strength requirements.</div>
+                            </div>
+                            <select class="input small">
+                                <option>Standard</option>
+                                <option selected>Strong</option>
+                                <option>Very strong</option>
+                            </select>
+                        </div>
+
+                        <div class="sec-actions">
+                            <button class="btn ghost full" type="button">View sign-in log</button>
+                            <button class="btn ghost full" type="button">Reset passwords</button>
+                        </div>
+                    </div>
+                </section>
+
+            </aside>
+        </section>
+
+    </main>
+</body>
+
+</html>

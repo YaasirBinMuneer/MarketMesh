@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Mesh – Retail Dashboard</title>
+    <link rel="stylesheet" href="RetailDashboard.css" />
+</head>
+
+<body>
+    <main class="slide" aria-label="Market Mesh Retail Dashboard">
+
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="brand">
+                <div class="logo" aria-hidden="true"></div>
+                <div class="brand-text">
+                    <h1>Market Mesh</h1>
+                    <p>Retailer Dashboard</p>
+                </div>
+            </div>
+
+
+            <nav class="nav" aria-label="Primary navigation">
+                <a class="nav-item" href="RetailDashboard.html">Dashboard</a>
+                <a class="nav-item" href="Inventory.html">Inventory</a>
+                <a class="nav-item" href="Exchange.html">Exchange</a>
+                <a class="nav-item" href="Analytics.html">Analytics</a>
+                <a class="nav-item" href="Settings.html">Settings</a>
+            </nav>
+        
+
+            <div class="top-actions">
+                <span class="pill">
+                    <span class="dot" aria-hidden="true"></span>
+                    System Online
+                </span>
+
+                <button class="account" type="button">
+                    <span class="avatar" aria-hidden="true"></span>
+                    <span class="acct-text">
+                        <span class="acct-name">Retailer A</span>
+                        <span class="acct-sub">Store Admin</span>
+                    </span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <section class="content">
+
+            <!-- Left -->
+            <section class="left">
+
+                <!-- Hero -->
+                <section class="panel hero">
+                    <div class="hero-left">
+                        <h2>Dashboard</h2>
+                        <p>Monitor inventory health, alerts, and AI recommendations in one view.</p>
+                    </div>
+
+                    <div class="hero-actions">
+                        <button class="btn ghost" type="button">Download Report</button>
+                        <button class="btn primary" type="button">Add Product</button>
+                    </div>
+                </section>
+
+                <!-- KPIs -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Today’s snapshot</h3>
+                            <p>Quick indicators for stock health and performance.</p>
+                        </div>
+
+                        <div class="panel-actions">
+                            <span class="pill subtle">Updated now</span>
+                        </div>
+                    </div>
+
+                    <div class="kpis">
+                        <div class="kpi">
+                            <div class="kpi-head">
+                                <div class="kpi-label">Live inventory</div>
+                                <span class="chip ok">Stable</span>
+                            </div>
+                            <div class="kpi-value">1,240</div>
+                            <div class="kpi-sub">items tracked</div>
+                        </div>
+
+                        <div class="kpi">
+                            <div class="kpi-head">
+                                <div class="kpi-label">Low stock</div>
+                                <span class="chip warn">Action</span>
+                            </div>
+                            <div class="kpi-value">18</div>
+                            <div class="kpi-sub">need attention</div>
+                        </div>
+
+                        <div class="kpi">
+                            <div class="kpi-head">
+                                <div class="kpi-label">Out of stock</div>
+                                <span class="chip bad">Urgent</span>
+                            </div>
+                            <div class="kpi-value">35</div>
+                            <div class="kpi-sub">potential lost sales</div>
+                        </div>
+
+                        <div class="kpi">
+                            <div class="kpi-head">
+                                <div class="kpi-label">Dead stock risk</div>
+                                <span class="chip neutral">AI</span>
+                            </div>
+                            <div class="kpi-value">7%</div>
+                            <div class="kpi-sub">flagged by AI</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Inventory overview table -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Inventory overview</h3>
+                            <p>Top items that need action. Use quick tools per row.</p>
+                        </div>
+
+                        <div class="panel-actions">
+                            <input class="search" type="text" placeholder="Search products..." />
+                            <button class="btn ghost small" type="button">View all</button>
+                        </div>
+                    </div>
+
+                    <div class="table">
+                        <div class="thead">
+                            <div>Product</div>
+                            <div>Category</div>
+                            <div class="t-right">Price</div>
+                            <div class="t-right">Stock</div>
+                            <div>Status</div>
+                            <div class="t-right">Action</div>
+                        </div>
+
+                        <div class="trow">
+                            <div class="prod">
+                                <span class="thumb" aria-hidden="true"></span>
+                                <div class="prod-text">
+                                    <div class="prod-name">Bottled Water (500ml)</div>
+                                    <div class="prod-sub">SKU: WTR-500</div>
+                                </div>
+                            </div>
+                            <div>Groceries</div>
+                            <div class="t-right">AED 2.50</div>
+                            <div class="t-right">9</div>
+                            <div><span class="status warn">Low stock</span></div>
+                            <div class="t-right"><button class="rowbtn" type="button">Manage</button></div>
+                        </div>
+
+                        <div class="trow">
+                            <div class="prod">
+                                <span class="thumb" aria-hidden="true"></span>
+                                <div class="prod-text">
+                                    <div class="prod-name">Wireless Earbuds</div>
+                                    <div class="prod-sub">SKU: ELEC-238</div>
+                                </div>
+                            </div>
+                            <div>Electronics</div>
+                            <div class="t-right">AED 129</div>
+                            <div class="t-right">0</div>
+                            <div><span class="status bad">Out of stock</span></div>
+                            <div class="t-right"><button class="rowbtn" type="button">Find Nearby</button></div>
+                        </div>
+
+                        <div class="trow">
+                            <div class="prod">
+                                <span class="thumb" aria-hidden="true"></span>
+                                <div class="prod-text">
+                                    <div class="prod-name">Organic Milk (1L)</div>
+                                    <div class="prod-sub">SKU: DAI-101</div>
+                                </div>
+                            </div>
+                            <div>Dairy</div>
+                            <div class="t-right">AED 9.50</div>
+                            <div class="t-right">42</div>
+                            <div><span class="status ok">In stock</span></div>
+                            <div class="t-right"><button class="rowbtn" type="button">Manage</button></div>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+
+            <!-- Right -->
+            <aside class="right">
+
+                <!-- Alerts -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Alerts</h3>
+                            <p>What needs attention today.</p>
+                        </div>
+                        <div class="panel-actions">
+                            <button class="btn ghost small" type="button">View all</button>
+                        </div>
+                    </div>
+
+                    <div class="list">
+                        <div class="list-item">
+                            <span class="bullet warn" aria-hidden="true"></span>
+                            <div class="list-body">
+                                <div class="list-title">Low stock: Bottled Water (500ml)</div>
+                                <div class="list-sub">Only 9 units left. Consider reorder or exchange.</div>
+                            </div>
+                            <button class="rowbtn" type="button">Open</button>
+                        </div>
+
+                        <div class="list-item">
+                            <span class="bullet bad" aria-hidden="true"></span>
+                            <div class="list-body">
+                                <div class="list-title">Out of stock: Wireless Earbuds</div>
+                                <div class="list-sub">High demand detected nearby. Try Exchange.</div>
+                            </div>
+                            <button class="rowbtn" type="button">Open</button>
+                        </div>
+
+                        <div class="list-item">
+                            <span class="bullet ok" aria-hidden="true"></span>
+                            <div class="list-body">
+                                <div class="list-title">Stock balanced</div>
+                                <div class="list-sub">No action needed for Dairy category today.</div>
+                            </div>
+                            <button class="rowbtn" type="button">Open</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AI Insights -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>AI Insights</h3>
+                            <p>Recommended actions based on trends.</p>
+                        </div>
+                        <div class="panel-actions">
+                            <span class="pill subtle">Updated now</span>
+                            <button class="btn ghost small" type="button">View</button>
+                        </div>
+                    </div>
+
+                    <div class="cards">
+                        <div class="card">
+                            <div class="card-top">
+                                <div class="card-title">Dead stock risk</div>
+                                <span class="chip neutral">7%</span>
+                            </div>
+                            <p class="card-text">
+                                Items in “Office furniture” show slow movement. Consider discounting 10–15%.
+                            </p>
+                            <button class="btn ghost full" type="button">Review dead stock</button>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top">
+                                <div class="card-title">High local demand</div>
+                                <span class="chip neutral">Water</span>
+                            </div>
+                            <p class="card-text">
+                                Nearby stores report higher demand for bottled water this week.
+                            </p>
+                            <button class="btn primary full" type="button">Check Exchange</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Weekly Trend -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Weekly trend</h3>
+                            <p>Demand vs supply indicators.</p>
+                        </div>
+                        <div class="panel-actions">
+                            <span class="pill subtle">Last 7 days</span>
+                        </div>
+                    </div>
+
+                    <div class="bars" aria-hidden="true">
+                        <span style="height:40%"></span>
+                        <span style="height:60%"></span>
+                        <span style="height:52%"></span>
+                        <span style="height:78%"></span>
+                        <span style="height:48%"></span>
+                        <span style="height:66%"></span>
+                        <span style="height:58%"></span>
+                    </div>
+
+                    <div class="legend">
+                        <span><i></i> Demand</span>
+                        <span><i class="lg2"></i> Supply</span>
+                    </div>
+                </section>
+
+            </aside>
+        </section>
+
+    </main>
+</body>
+
+</html>

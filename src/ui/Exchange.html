@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Mesh – Exchange</title>
+    <link rel="stylesheet" href="Exchange.css" />
+</head>
+
+<body>
+    <main class="slide" aria-label="Market Mesh Exchange Page">
+
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="brand">
+                <div class="logo" aria-hidden="true"></div>
+                <div class="brand-text">
+                    <h1>Market Mesh</h1>
+                    <p>Retailer Dashboard</p>
+                </div>
+            </div>
+
+            <nav class="nav" aria-label="Primary navigation">
+                <a class="nav-item" href="RetailDashboard.html">Dashboard</a>
+                <a class="nav-item" href="Inventory.html">Inventory</a>
+                <a class="nav-item" href="Exchange.html">Exchange</a>
+                <a class="nav-item" href="Analytics.html">Analytics</a>
+                <a class="nav-item" href="Settings.html">Settings</a>
+            </nav>
+
+            <div class="top-actions">
+                <span class="pill">
+                    <span class="dot" aria-hidden="true"></span>
+                    Live Sync
+                </span>
+
+                <button class="account" type="button">
+                    <span class="avatar" aria-hidden="true"></span>
+                    <span class="acct-text">
+                        <span class="acct-name">Retailer A</span>
+                        <span class="acct-sub">Store Admin</span>
+                    </span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <section class="content">
+
+            <!-- Left column -->
+            <section class="left">
+
+                <!-- Hero -->
+                <section class="panel hero">
+                    <div class="panel-title">
+                        <h2>Exchange</h2>
+                        <p>Request stock from nearby retailers or offer surplus inventory. Track all requests in one
+                            place.</p>
+                    </div>
+
+                    <div class="hero-actions">
+                        <button class="btn ghost" type="button">View Network</button>
+                        <button class="btn primary" type="button">New Request</button>
+                    </div>
+                </section>
+
+                <!-- Create Request -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Create a request</h3>
+                            <p>Pick the product, quantity, and search radius. We’ll suggest nearby matches
+                                automatically.</p>
+                        </div>
+                        <div class="panel-actions">
+                            <span class="pill subtle">AI matching on</span>
+                        </div>
+                    </div>
+
+                    <form class="form" onsubmit="return false;">
+                        <div class="field">
+                            <label for="prod">Product</label>
+                            <input id="prod" class="input" type="text"
+                                placeholder="e.g., Bottled Water (500ml) / SKU..." />
+                        </div>
+
+                        <div class="field">
+                            <label for="qty">Quantity</label>
+                            <input id="qty" class="input" type="number" min="1" placeholder="e.g., 30" />
+                        </div>
+
+                        <div class="field">
+                            <label for="radius">Radius</label>
+                            <select id="radius" class="input">
+                                <option>2 km</option>
+                                <option selected>5 km</option>
+                                <option>10 km</option>
+                                <option>20 km</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="priority">Priority</label>
+                            <select id="priority" class="input">
+                                <option>Normal</option>
+                                <option>High</option>
+                                <option>Urgent</option>
+                            </select>
+                        </div>
+
+                        <div class="field span-2">
+                            <label for="note">Note (optional)</label>
+                            <input id="note" class="input" type="text"
+                                placeholder="e.g., needed today for promotion demand" />
+                        </div>
+
+                        <div class="form-actions span-2">
+                            <button class="btn ghost" type="button">Save draft</button>
+                            <button class="btn primary" type="button">Send request</button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Matches / Listings -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Nearby matches</h3>
+                            <p>Suggested retailers who likely have the requested stock.</p>
+                        </div>
+
+                        <div class="panel-actions">
+                            <div class="seg" role="tablist" aria-label="Match view toggle">
+                                <button class="seg-btn active" type="button">Suggested</button>
+                                <button class="seg-btn" type="button">All</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="match-list">
+
+                        <article class="match">
+                            <div class="match-left">
+                                <div class="badge-dot ok" aria-hidden="true"></div>
+                                <div class="match-text">
+                                    <div class="match-title">Retailer B • 1.2 km</div>
+                                    <div class="match-sub">Estimated availability: 60+ units • Response time: fast</div>
+                                </div>
+                            </div>
+                            <div class="match-right">
+                                <span class="chip ok">High match</span>
+                                <button class="rowbtn" type="button">Request</button>
+                            </div>
+                        </article>
+
+                        <article class="match">
+                            <div class="match-left">
+                                <div class="badge-dot warn" aria-hidden="true"></div>
+                                <div class="match-text">
+                                    <div class="match-title">Retailer C • 3.8 km</div>
+                                    <div class="match-sub">Estimated availability: 20–40 units • Response time: medium
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="match-right">
+                                <span class="chip warn">Medium match</span>
+                                <button class="rowbtn" type="button">Request</button>
+                            </div>
+                        </article>
+
+                        <article class="match">
+                            <div class="match-left">
+                                <div class="badge-dot neutral" aria-hidden="true"></div>
+                                <div class="match-text">
+                                    <div class="match-title">Retailer D • 6.4 km</div>
+                                    <div class="match-sub">Estimated availability: unknown • Response time: slow</div>
+                                </div>
+                            </div>
+                            <div class="match-right">
+                                <span class="chip">Low match</span>
+                                <button class="rowbtn" type="button">Request</button>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- Right column -->
+            <aside class="right">
+
+                <!-- Exchange Summary -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Exchange summary</h3>
+                            <p>Your open requests, offers, and recent outcomes.</p>
+                        </div>
+                        <div class="panel-actions">
+                            <span class="pill subtle">Updated now</span>
+                        </div>
+                    </div>
+
+                    <div class="kpis">
+                        <div class="kpi">
+                            <div class="kpi-head">
+                                <div class="kpi-label">Open requests</div>
+                                <span class="chip warn">Needs review</span>
+                            </div>
+                            <div class="kpi-value">6</div>
+                            <div class="kpi-sub">Awaiting replies</div>
+                        </div>
+
+                        <div class="kpi">
+                            <div class="kpi-head">
+                                <div class="kpi-label">Open offers</div>
+                                <span class="chip ok">Available</span>
+                            </div>
+                            <div class="kpi-value">3</div>
+                            <div class="kpi-sub">Surplus items listed</div>
+                        </div>
+
+                        <div class="kpi">
+                            <div class="kpi-head">
+                                <div class="kpi-label">Completed</div>
+                                <span class="chip">This week</span>
+                            </div>
+                            <div class="kpi-value">12</div>
+                            <div class="kpi-sub">Successful exchanges</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Activity -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Recent activity</h3>
+                            <p>Latest updates across requests and offers.</p>
+                        </div>
+                        <div class="panel-actions">
+                            <button class="btn ghost small" type="button">View all</button>
+                        </div>
+                    </div>
+
+                    <div class="activity">
+                        <div class="act">
+                            <div class="act-left">
+                                <span class="dot-mini ok" aria-hidden="true"></span>
+                                <div>
+                                    <div class="act-title">Retailer B accepted your request</div>
+                                    <div class="act-sub">Bottled Water (500ml) • 30 units</div>
+                                </div>
+                            </div>
+                            <span class="time">2m ago</span>
+                        </div>
+
+                        <div class="act">
+                            <div class="act-left">
+                                <span class="dot-mini warn" aria-hidden="true"></span>
+                                <div>
+                                    <div class="act-title">Retailer C asked for confirmation</div>
+                                    <div class="act-sub">Organic Milk (1L) • 10 units</div>
+                                </div>
+                            </div>
+                            <span class="time">14m ago</span>
+                        </div>
+
+                        <div class="act">
+                            <div class="act-left">
+                                <span class="dot-mini" aria-hidden="true"></span>
+                                <div>
+                                    <div class="act-title">Your offer was viewed</div>
+                                    <div class="act-sub">Wireless Earbuds • 5 units</div>
+                                </div>
+                            </div>
+                            <span class="time">1h ago</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick actions -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Quick actions</h3>
+                            <p>Speed up common exchange workflows.</p>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <button class="btn primary full" type="button">Create offer</button>
+                        <button class="btn ghost full" type="button">Auto-match low stock</button>
+                        <button class="btn ghost full" type="button">Download exchange log</button>
+                    </div>
+                </section>
+
+            </aside>
+
+        </section>
+
+    </main>
+</body>
+
+</html>

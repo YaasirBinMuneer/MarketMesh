@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Mesh – Inventory</title>
+    <link rel="stylesheet" href="Inventory.css" />
+</head>
+
+<body>
+    <main class="slide" aria-label="Market Mesh Inventory Page">
+
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="brand">
+                <div class="logo" aria-hidden="true"></div>
+                <div class="brand-text">
+                    <h1>Market Mesh</h1>
+                    <p>Retailer Dashboard</p>
+                </div>
+            </div>
+
+            <nav class="nav" aria-label="Primary navigation">
+                <a class="nav-item" href="RetailDashboard.html">Dashboard</a>
+                <a class="nav-item" href="Inventory.html">Inventory</a>
+                <a class="nav-item" href="Exchange.html">Exchange</a>
+                <a class="nav-item" href="Analytics.html">Analytics</a>
+                <a class="nav-item" href="Settings.html">Settings</a>
+            </nav>
+
+            <div class="top-actions">
+                <span class="pill">
+                    <span class="dot" aria-hidden="true"></span>
+                    Live Sync
+                </span>
+
+                <button class="account" type="button">
+                    <span class="avatar" aria-hidden="true"></span>
+                    <span class="acct-text">
+                        <span class="acct-name">Retailer A</span>
+                        <span class="acct-sub">Store Admin</span>
+                    </span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <section class="content">
+
+            <!-- Left column -->
+            <section class="left">
+
+                <!-- Page hero -->
+                <section class="panel hero">
+                    <div class="panel-title">
+                        <h2>Inventory</h2>
+                        <p>Manage products, stock, and pricing. Review low-stock and out-of-stock items quickly.</p>
+                    </div>
+
+                    <div class="hero-actions">
+                        <button class="btn ghost" type="button">Download CSV</button>
+                        <button class="btn primary" type="button">Add Product</button>
+                    </div>
+                </section>
+
+                <!-- Filters + search -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Filters</h3>
+                            <p>Search by name/SKU and filter by category and status.</p>
+                        </div>
+
+                        <div class="panel-actions">
+                            <button class="btn ghost small" type="button">Reset</button>
+                            <button class="btn primary small" type="button">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="filters">
+                        <div class="field">
+                            <label for="q">Search</label>
+                            <input id="q" class="input" type="text" placeholder="Search by product name or SKU..." />
+                        </div>
+
+                        <div class="field">
+                            <label for="cat">Category</label>
+                            <select id="cat" class="input">
+                                <option>All categories</option>
+                                <option>Groceries</option>
+                                <option>Electronics</option>
+                                <option>Dairy</option>
+                                <option>Home</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="status">Status</label>
+                            <select id="status" class="input">
+                                <option>Any status</option>
+                                <option>In stock</option>
+                                <option>Low stock</option>
+                                <option>Out of stock</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="sort">Sort</label>
+                            <select id="sort" class="input">
+                                <option>Recently updated</option>
+                                <option>Stock: low to high</option>
+                                <option>Stock: high to low</option>
+                                <option>Price: low to high</option>
+                                <option>Price: high to low</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Inventory table -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Products</h3>
+                            <p>Quick actions for each product. Nothing here should clip or overlap.</p>
+                        </div>
+
+                        <div class="panel-actions">
+                            <span class="pill subtle">1,240 total</span>
+                            <button class="btn ghost small" type="button">View All</button>
+                        </div>
+                    </div>
+
+                    <div class="table">
+                        <div class="thead">
+                            <div>Product</div>
+                            <div>Category</div>
+                            <div>Price</div>
+                            <div>Stock</div>
+                            <div>Status</div>
+                            <div class="t-right">Action</div>
+                        </div>
+
+                        <div class="trow">
+                            <div class="prod">
+                                <span class="thumb" aria-hidden="true"></span>
+                                <div class="prod-text">
+                                    <div class="prod-name">Bottled Water (500ml)</div>
+                                    <div class="prod-sub">SKU: WTR-500</div>
+                                </div>
+                            </div>
+                            <div>Groceries</div>
+                            <div>AED 2.50</div>
+                            <div>9</div>
+                            <div><span class="status warn">Low stock</span></div>
+                            <div class="t-right"><button class="rowbtn" type="button">Manage</button></div>
+                        </div>
+
+                        <div class="trow">
+                            <div class="prod">
+                                <span class="thumb" aria-hidden="true"></span>
+                                <div class="prod-text">
+                                    <div class="prod-name">Wireless Earbuds</div>
+                                    <div class="prod-sub">SKU: ELEC-238</div>
+                                </div>
+                            </div>
+                            <div>Electronics</div>
+                            <div>AED 129</div>
+                            <div>0</div>
+                            <div><span class="status bad">Out of stock</span></div>
+                            <div class="t-right"><button class="rowbtn" type="button">Find Nearby</button></div>
+                        </div>
+
+                        <div class="trow">
+                            <div class="prod">
+                                <span class="thumb" aria-hidden="true"></span>
+                                <div class="prod-text">
+                                    <div class="prod-name">Organic Milk (1L)</div>
+                                    <div class="prod-sub">SKU: DAI-101</div>
+                                </div>
+                            </div>
+                            <div>Dairy</div>
+                            <div>AED 9.50</div>
+                            <div>42</div>
+                            <div><span class="status ok">In stock</span></div>
+                            <div class="t-right"><button class="rowbtn" type="button">Manage</button></div>
+                        </div>
+
+                        <div class="trow">
+                            <div class="prod">
+                                <span class="thumb" aria-hidden="true"></span>
+                                <div class="prod-text">
+                                    <div class="prod-name">Scented Candle – Vanilla</div>
+                                    <div class="prod-sub">SKU: HME-044</div>
+                                </div>
+                            </div>
+                            <div>Home</div>
+                            <div>AED 25</div>
+                            <div>6</div>
+                            <div><span class="status warn">Low stock</span></div>
+                            <div class="t-right"><button class="rowbtn" type="button">Manage</button></div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Right column -->
+            <aside class="right">
+
+                <!-- Summary cards -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Inventory Summary</h3>
+                            <p>Fast view of what needs attention today.</p>
+                        </div>
+                        <div class="panel-actions">
+                            <span class="pill subtle">Updated now</span>
+                        </div>
+                    </div>
+
+                    <div class="kpis">
+                        <div class="kpi">
+                            <div class="kpi-head">
+                                <div class="kpi-label">In stock</div>
+                                <span class="chip ok">Healthy</span>
+                            </div>
+                            <div class="kpi-value">915</div>
+                            <div class="kpi-sub">Available for sale</div>
+                        </div>
+
+                        <div class="kpi">
+                            <div class="kpi-head">
+                                <div class="kpi-label">Low stock</div>
+                                <span class="chip warn">Needs action</span>
+                            </div>
+                            <div class="kpi-value">18</div>
+                            <div class="kpi-sub">Restock recommended</div>
+                        </div>
+
+                        <div class="kpi">
+                            <div class="kpi-head">
+                                <div class="kpi-label">Out of stock</div>
+                                <span class="chip bad">Urgent</span>
+                            </div>
+                            <div class="kpi-value">35</div>
+                            <div class="kpi-sub">Potential lost sales</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick actions -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Quick Actions</h3>
+                            <p>Common actions for stock maintenance.</p>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <button class="btn ghost full" type="button">Create reorder list</button>
+                        <button class="btn ghost full" type="button">Bulk update prices</button>
+                        <button class="btn primary full" type="button">Check Exchange</button>
+                    </div>
+                </section>
+
+            </aside>
+        </section>
+
+    </main>
+</body>
+
+</html>

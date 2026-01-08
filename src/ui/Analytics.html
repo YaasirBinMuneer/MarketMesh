@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Mesh – Analytics</title>
+    <link rel="stylesheet" href="Analytics.css" />
+</head>
+
+<body>
+    <main class="slide" aria-label="Market Mesh Analytics Page">
+
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="brand">
+                <div class="logo" aria-hidden="true"></div>
+                <div class="brand-text">
+                    <h1>Market Mesh</h1>
+                    <p>Retailer Dashboard</p>
+                </div>
+            </div>
+
+            <nav class="nav" aria-label="Primary navigation">
+                <a class="nav-item" href="RetailDashboard.html">Dashboard</a>
+                <a class="nav-item" href="Inventory.html">Inventory</a>
+                <a class="nav-item" href="Exchange.html">Exchange</a>
+                <a class="nav-item" href="Analytics.html">Analytics</a>
+                <a class="nav-item" href="Settings.html">Settings</a>
+            </nav>
+
+            <div class="top-actions">
+                <span class="pill">
+                    <span class="dot" aria-hidden="true"></span>
+                    Live Sync
+                </span>
+
+                <button class="account" type="button">
+                    <span class="avatar" aria-hidden="true"></span>
+                    <span class="acct-text">
+                        <span class="acct-name">Retailer A</span>
+                        <span class="acct-sub">Store Admin</span>
+                    </span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <section class="content">
+
+            <!-- Left column -->
+            <section class="left">
+
+                <!-- Hero -->
+                <section class="panel hero">
+                    <div class="hero-left">
+                        <h2>Analytics</h2>
+                        <p>Track sales trends, category performance, and AI insights to make smarter stock decisions.
+                        </p>
+                    </div>
+
+                    <div class="hero-actions">
+                        <button class="btn ghost" type="button">Export</button>
+                        <button class="btn primary" type="button">Generate report</button>
+                    </div>
+                </section>
+
+                <!-- Filters -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Filters</h3>
+                            <p>Control the time range and what you’re analyzing.</p>
+                        </div>
+                        <div class="panel-actions">
+                            <button class="btn ghost small" type="button">Reset</button>
+                            <button class="btn primary small" type="button">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="filters">
+                        <div class="field">
+                            <label for="range">Time range</label>
+                            <select id="range" class="input">
+                                <option>Last 7 days</option>
+                                <option selected>Last 30 days</option>
+                                <option>Last 90 days</option>
+                                <option>Year to date</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="store">Store</label>
+                            <select id="store" class="input">
+                                <option selected>Retailer A – Downtown</option>
+                                <option>Retailer A – Marina</option>
+                                <option>Retailer A – Silicon Oasis</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="metric">Primary metric</label>
+                            <select id="metric" class="input">
+                                <option selected>Revenue</option>
+                                <option>Units sold</option>
+                                <option>Orders</option>
+                                <option>Gross margin</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="view">Compare</label>
+                            <select id="view" class="input">
+                                <option selected>Previous period</option>
+                                <option>Same period last year</option>
+                                <option>No comparison</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- KPI row -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Performance snapshot</h3>
+                            <p>Key outcomes for the selected time range.</p>
+                        </div>
+                        <div class="panel-actions">
+                            <span class="pill subtle">Last 30 days</span>
+                        </div>
+                    </div>
+
+                    <div class="kpis">
+                        <div class="kpi">
+                            <div class="kpi-head">
+                                <div class="kpi-label">Revenue</div>
+                                <span class="chip ok">+8.2%</span>
+                            </div>
+                            <div class="kpi-value">AED 248K</div>
+                            <div class="kpi-sub">vs previous period</div>
+                        </div>
+
+                        <div class="kpi">
+                            <div class="kpi-head">
+                                <div class="kpi-label">Units sold</div>
+                                <span class="chip ok">+4.9%</span>
+                            </div>
+                            <div class="kpi-value">14,320</div>
+                            <div class="kpi-sub">total units</div>
+                        </div>
+
+                        <div class="kpi">
+                            <div class="kpi-head">
+                                <div class="kpi-label">Low-stock events</div>
+                                <span class="chip warn">+11%</span>
+                            </div>
+                            <div class="kpi-value">62</div>
+                            <div class="kpi-sub">restock recommended</div>
+                        </div>
+
+                        <div class="kpi">
+                            <div class="kpi-head">
+                                <div class="kpi-label">Dead stock risk</div>
+                                <span class="chip neutral">AI</span>
+                            </div>
+                            <div class="kpi-value">6.4%</div>
+                            <div class="kpi-sub">items flagged</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Trend chart + summary -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Sales trend</h3>
+                            <p>Daily movement for the selected metric (demo chart).</p>
+                        </div>
+                        <div class="panel-actions">
+                            <button class="btn ghost small" type="button">View details</button>
+                        </div>
+                    </div>
+
+                    <div class="chart">
+                        <div class="chart-bars" aria-hidden="true">
+                            <span style="height:38%"></span>
+                            <span style="height:52%"></span>
+                            <span style="height:44%"></span>
+                            <span style="height:60%"></span>
+                            <span style="height:74%"></span>
+                            <span style="height:58%"></span>
+                            <span style="height:66%"></span>
+                            <span style="height:82%"></span>
+                            <span style="height:63%"></span>
+                            <span style="height:71%"></span>
+                            <span style="height:56%"></span>
+                            <span style="height:68%"></span>
+                            <span style="height:78%"></span>
+                            <span style="height:62%"></span>
+                        </div>
+
+                        <div class="chart-legend">
+                            <span><i></i> Current period</span>
+                            <span><i class="lg2"></i> Previous period</span>
+                        </div>
+                    </div>
+
+                    <div class="summary-grid">
+                        <div class="summary">
+                            <div class="summary-title">Best day</div>
+                            <div class="summary-value">AED 12.4K</div>
+                            <div class="summary-sub">Highest daily revenue</div>
+                        </div>
+
+                        <div class="summary">
+                            <div class="summary-title">Avg/day</div>
+                            <div class="summary-value">AED 8.1K</div>
+                            <div class="summary-sub">30-day average</div>
+                        </div>
+
+                        <div class="summary">
+                            <div class="summary-title">Volatility</div>
+                            <div class="summary-value">Medium</div>
+                            <div class="summary-sub">Demand fluctuations</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Category table -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Category performance</h3>
+                            <p>How each category performs across revenue and stock health.</p>
+                        </div>
+                        <div class="panel-actions">
+                            <span class="pill subtle">Top categories</span>
+                            <button class="btn ghost small" type="button">View all</button>
+                        </div>
+                    </div>
+
+                    <div class="table">
+                        <div class="thead">
+                            <div>Category</div>
+                            <div class="t-right">Revenue</div>
+                            <div class="t-right">Units</div>
+                            <div>Stock health</div>
+                            <div class="t-right">Action</div>
+                        </div>
+
+                        <div class="trow">
+                            <div class="cat">
+                                <span class="dotcat" aria-hidden="true"></span>
+                                <div class="cattext">
+                                    <div class="catname">Groceries</div>
+                                    <div class="catsub">Fast-moving</div>
+                                </div>
+                            </div>
+                            <div class="t-right">AED 96K</div>
+                            <div class="t-right">7,800</div>
+                            <div><span class="status ok">Healthy</span></div>
+                            <div class="t-right"><button class="rowbtn" type="button">Details</button></div>
+                        </div>
+
+                        <div class="trow">
+                            <div class="cat">
+                                <span class="dotcat" aria-hidden="true"></span>
+                                <div class="cattext">
+                                    <div class="catname">Electronics</div>
+                                    <div class="catsub">High margin</div>
+                                </div>
+                            </div>
+                            <div class="t-right">AED 74K</div>
+                            <div class="t-right">1,120</div>
+                            <div><span class="status warn">Low stock</span></div>
+                            <div class="t-right"><button class="rowbtn" type="button">Restock</button></div>
+                        </div>
+
+                        <div class="trow">
+                            <div class="cat">
+                                <span class="dotcat" aria-hidden="true"></span>
+                                <div class="cattext">
+                                    <div class="catname">Dairy</div>
+                                    <div class="catsub">Short shelf-life</div>
+                                </div>
+                            </div>
+                            <div class="t-right">AED 41K</div>
+                            <div class="t-right">3,420</div>
+                            <div><span class="status ok">Healthy</span></div>
+                            <div class="t-right"><button class="rowbtn" type="button">Details</button></div>
+                        </div>
+
+                        <div class="trow">
+                            <div class="cat">
+                                <span class="dotcat" aria-hidden="true"></span>
+                                <div class="cattext">
+                                    <div class="catname">Home</div>
+                                    <div class="catsub">Slow-moving</div>
+                                </div>
+                            </div>
+                            <div class="t-right">AED 37K</div>
+                            <div class="t-right">1,980</div>
+                            <div><span class="status bad">Dead stock risk</span></div>
+                            <div class="t-right"><button class="rowbtn" type="button">Discount</button></div>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- Right column -->
+            <aside class="right">
+
+                <!-- Insights -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Insights</h3>
+                            <p>AI suggestions based on sales and inventory patterns.</p>
+                        </div>
+                        <div class="panel-actions">
+                            <span class="pill subtle">Updated now</span>
+                        </div>
+                    </div>
+
+                    <div class="cards">
+                        <div class="card">
+                            <div class="card-top">
+                                <div class="card-title">Improve availability</div>
+                                <span class="chip warn">Electronics</span>
+                            </div>
+                            <p class="card-text">
+                                Out-of-stock events increased. Consider exchange matching for top items.
+                            </p>
+                            <button class="btn primary full" type="button">Check Exchange</button>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top">
+                                <div class="card-title">Reduce dead stock</div>
+                                <span class="chip neutral">Home</span>
+                            </div>
+                            <p class="card-text">
+                                Slow-moving items are tying up capital. Try a small discount or bundle.
+                            </p>
+                            <button class="btn ghost full" type="button">View products</button>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top">
+                                <div class="card-title">Pricing opportunity</div>
+                                <span class="chip ok">Groceries</span>
+                            </div>
+                            <p class="card-text">
+                                Demand is strong. A minor price adjustment may improve margin with minimal risk.
+                            </p>
+                            <button class="btn ghost full" type="button">Open pricing</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick breakdown -->
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <h3>Breakdown</h3>
+                            <p>Where performance is coming from.</p>
+                        </div>
+                    </div>
+
+                    <div class="breakdown">
+                        <div class="bd">
+                            <div class="bd-top">
+                                <div class="bd-title">Top product</div>
+                                <span class="pill subtle">30 days</span>
+                            </div>
+                            <div class="bd-main">Bottled Water (500ml)</div>
+                            <div class="bd-sub">2,140 units sold • AED 5.3K</div>
+                        </div>
+
+                        <div class="bd">
+                            <div class="bd-top">
+                                <div class="bd-title">Most alerts</div>
+                                <span class="pill subtle">Stock</span>
+                            </div>
+                            <div class="bd-main">Wireless Earbuds</div>
+                            <div class="bd-sub">Out-of-stock events: 9</div>
+                        </div>
+
+                        <div class="bd">
+                            <div class="bd-top">
+                                <div class="bd-title">Highest margin</div>
+                                <span class="pill subtle">Category</span>
+                            </div>
+                            <div class="bd-main">Electronics</div>
+                            <div class="bd-sub">Avg margin: 24%</div>
+                        </div>
+                    </div>
+                </section>
+
+            </aside>
+
+        </section>
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Market Mesh – Retail Access</title>
+  <link rel="stylesheet" href="Login.css" />
+</head>
+<body>
+  <main class="slide" aria-label="Market Mesh Retail Access">
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brand-text">
+          <h1>Market Mesh</h1>
+          <p>Retail Portal</p>
+        </div>
+      </div>
+
+      <div class="meta">
+        <span class="pill">
+          <span class="dot" aria-hidden="true"></span>
+          System Online
+        </span>
+        <span class="pill">Secure Access</span>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <section class="content">
+      <!-- Left: Showcase -->
+      <section class="showcase">
+        <div class="showcase-inner">
+          <div class="headline">
+            <div class="kicker">
+              <b>Retail Interface</b>
+              <span class="sep">•</span>
+              <span>Sign in to manage inventory smarter</span>
+            </div>
+
+            <h2>
+              Where data meets demand, <span>in real time</span>.
+            </h2>
+
+            <p>
+              A secure portal for retailers to monitor inventory, detect dead stock using AI,
+              and rebalance stock with nearby stores.
+            </p>
+
+            <div class="badge">
+              <span class="mini" aria-hidden="true"></span>
+              Role-based access for retailers and consumers
+            </div>
+          </div>
+
+          <div class="features">
+            <div class="feat">
+              <div class="t">Inventory</div>
+              <div class="v">Real-time visibility</div>
+            </div>
+            <div class="feat">
+              <div class="t">AI Insights</div>
+              <div class="v">Dead stock detection</div>
+            </div>
+            <div class="feat">
+              <div class="t">B2B Exchange</div>
+              <div class="v">Local rebalancing</div>
+            </div>
+          </div>
+
+          <!-- NEW: Fill empty space with clean mini-cards -->
+          <div class="mini-grid" aria-label="Quick stats preview">
+            <div class="mini-card">
+              <div class="mini-title">Live inventory</div>
+              <div class="mini-value">1,240</div>
+              <div class="mini-sub">items tracked</div>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-title">Low stock alerts</div>
+              <div class="mini-value">18</div>
+              <div class="mini-sub">need action today</div>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-title">Dead stock risk</div>
+              <div class="mini-value">7%</div>
+              <div class="mini-sub">AI detected</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: Auth -->
+      <aside class="auth">
+        <h3>Sign in</h3>
+        <p>Access dashboards, analytics, and inventory exchange tools.</p>
+
+        <div class="tabs" id="roleTabs" data-role="retailer">
+            <span class="tabs-slider" aria-hidden="true"></span>
+          
+            <button class="tab active" type="button" data-role="retailer">Retailer</button>
+            <button class="tab" type="button" data-role="consumer">Consumer</button>
+          </div>
+          
+        
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="name@store.com" />
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="••••••••" />
+        </div>
+
+        <!-- NEW: Proper spacing between row and button -->
+        <div class="auth-actions">
+          <div class="row">
+            <label class="check">
+              <input type="checkbox" />
+              Remember me
+            </label>
+            <a class="link" href="#" onclick="return false;">Forgot password?</a>
+          </div>
+
+          <button class="btn" type="button">Continue</button>
+        </div>
+
+        <div class="divider"><span>or</span></div>
+
+        <div class="alt">
+          <button class="ghost" type="button">Sign in with Google</button>
+          <button class="ghost" type="button">Sign in with Microsoft</button>
+        </div>
+
+        <p class="footnote">
+          By continuing, you agree to the platform terms. This is a UI mockup for demo purposes.
+        </p>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    const roleTabs = document.getElementById('roleTabs');
+    const tabs = roleTabs.querySelectorAll('.tab');
+  
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        roleTabs.dataset.role = tab.dataset.role;
+      });
+    });
+  </script>
+  
+</body>
+</html>
